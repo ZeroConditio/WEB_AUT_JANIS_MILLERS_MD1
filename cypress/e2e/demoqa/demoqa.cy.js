@@ -7,33 +7,48 @@ describe('DEMO QA', () => {
         });
 
         it('Click grids and validate', () => {
-            const evenNumbers = {
-            two: 'Two',
-            four: 'Four',
-            six: 'Six',
-            eight: 'Eight'
-        }
+            const numbers = {
+                one: 'One',
+                two: 'Two',
+                three: 'Three',
+                four: 'Four',
+                five: 'Five',
+                six: 'Six',
+                seven: 'Seven',
+                eight: 'Eight',
+                nine: 'Nine'
+            };
+
             // Open Grid
             selectablesPage.openGrid.click();
             // Click Two
-            selectablesPage.getNumber(evenNumbers.two).click();
+            selectablesPage.getNumber(numbers.two).click();
             // Click Four
-            selectablesPage.getNumber(evenNumbers.four).click();
+            selectablesPage.getNumber(numbers.four).click();
             // Click Six
-            selectablesPage.getNumber(evenNumbers.six).click();
+            selectablesPage.getNumber(numbers.six).click();
             // Click Eight
-            selectablesPage.getNumber(evenNumbers.eight).click();
+            selectablesPage.getNumber(numbers.eight).click();
             // Validate clicked
             // Two
-            selectablesPage.numberHighlighted(evenNumbers.two);
+            selectablesPage.numberHighlighted(numbers.two);
             // Four
-            selectablesPage.numberHighlighted(evenNumbers.four);
+            selectablesPage.numberHighlighted(numbers.four);
             // Six
-            selectablesPage.numberHighlighted(evenNumbers.six);
+            selectablesPage.numberHighlighted(numbers.six);
             //Eight
-            selectablesPage.numberHighlighted(evenNumbers.eight);
+            selectablesPage.numberHighlighted(numbers.eight);
             // Validate not clicked
-            
+            // One
+            selectablesPage.notHighlighted(numbers.one);
+            // Three
+            selectablesPage.notHighlighted(numbers.three);
+            // Five
+            selectablesPage.notHighlighted(numbers.five);
+            // Seven
+            selectablesPage.notHighlighted(numbers.seven);
+            // Nine
+            selectablesPage.notHighlighted(numbers.nine);
         });
     });
 });

@@ -19,4 +19,8 @@ export class selectablesPage{
     static numberHighlighted(label){
         this.getNumber(label).should('have.class', 'active')
     }
+
+    static notHighlighted(label){
+        this.getNumber(label).should('not.have.class', 'active')
+    }
 }
