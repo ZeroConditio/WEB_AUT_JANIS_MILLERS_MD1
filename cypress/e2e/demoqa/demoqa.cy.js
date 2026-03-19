@@ -24,7 +24,16 @@ describe('DEMO QA', () => {
             // Click Eight
             selectablesPage.getNumber(evenNumbers.eight).click();
             // Validate clicked
+            // Two
+            selectablesPage.numberHighlighted(evenNumbers.two);
+            // Four
+            selectablesPage.numberHighlighted(evenNumbers.four);
+            // Six
+            selectablesPage.numberHighlighted(evenNumbers.six);
+            //Eight
+            selectablesPage.numberHighlighted(evenNumbers.eight);
             // Validate not clicked
+            
         });
     });
 });

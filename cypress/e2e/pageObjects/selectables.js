@@ -14,4 +14,9 @@ export class selectablesPage{
     static getNumber(label){
         return cy.contains('.list-group-item-action', label)
     }
+
+    // https://docs.cypress.io/api/commands/should#Value
+    static numberHighlighted(label){
+        this.getNumber(label).should('have.class', 'active')
+    }
 }
