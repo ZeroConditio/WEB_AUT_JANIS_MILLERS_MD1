@@ -7,4 +7,11 @@ export class selectablesPage{
         return cy.get('#demo-tab-grid')
     }
 
+    static get getTwo(){
+        return cy.get('#row1')
+    }
+
+    static getNumber(label){
+        return cy.contains('.list-group-item-action', label)
+    }
 }
